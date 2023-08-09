@@ -1,0 +1,230 @@
+<html>
+<head>
+  <title>My Restaurant</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+    /* Add your css styles here */
+    /* Add your css styles here */
+   
+* {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #f9eccc;
+  cursor:url('taxi-cursor.png'),auto;
+}
+#header {
+  /*background:linear-gradient(black,#f6c207);*/
+  background-color: #c79006;
+   
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+#header h1 {
+  font-family:'Times New Roman', Times, serif;
+  font-style: italic;
+  text-shadow: 2px 2px 4px red;
+ /* font-size: 36px;*/
+}
+
+#header p {
+  padding-top: 3%;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+#header nav {
+  display: flex;
+}
+
+#header nav ul {
+  list-style: none;
+}
+
+#header nav ul li {
+  padding-top: 5%;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#header nav ul li a {
+  
+  color: white;
+  text-decoration: none;
+ 
+}
+
+#header nav ul li a:hover {
+  color: yellow;
+}
+
+#content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#banner {
+  height: 500px;
+}
+
+#banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#features {
+  background-color: #fdee8f;
+  padding: 40px;
+}
+
+#features h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+#features ul {
+  list-style: none;
+}
+
+#features ul li {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#testimonials {
+  padding: 40px;
+}
+
+#testimonials h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.testimonial img {
+  width: 5%;
+
+  border-radius: 50%;
+}
+
+.testimonial p {
+   font-family: Arial, sans-serif; 
+   font-size:18px; 
+   margin-left :20px; 
+   }
+
+.testimonial span {
+   display :block; 
+   font-style :italic; 
+   color :#d7ae1b; 
+   }
+
+#footer {
+   background-color :#d7ae1b; 
+   color :white; 
+   padding :20px; 
+   text-align :center; 
+   }
+
+#footer p {
+   font-family :Arial, sans-serif; 
+   font-size :16px; 
+   }
+   .about .contact {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+<div class="row">
+  <div class="col-lg-3 col-md-3">
+    <h1>My Restaurant</h1>
+  </div>
+  <div class="col-lg-6 col-md-6">
+    <p>Welcome to the best place to enjoy delicious food and drinks.
+        
+    </p>
+  </div>
+  <div class="col-lg-3 col-md-3">
+    <nav>
+      <ul>
+        <li><a href="restaurantproject.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a onclick="about()" >About</a></li>
+        <li><a onclick="contact()">Contact</a></li>
+      </ul>
+      <!--
+      <div class="about">jcdjf </div>
+      <div class="contact">
+fdfdf
+      </div>-->
+    </nav>
+  </div>
+</div>
+
+    </div>
+    
+    
+    
+  </div>
+  <div id="content">
+    <div id="banner">
+      <img src="pic.jpg" alt="Banner image">
+    </div>
+    <div id="features">
+      <h2>Why choose us?</h2>
+      <ul>
+        <li>We use fresh and quality ingredients.</li>
+        <li>We have a variety of dishes to suit your taste buds.</li>
+        <li>We offer friendly and fast service.</li>
+        <li>We have affordable prices and special offers.</li>
+      </ul>
+    </div>
+    <div id="testimonials">
+      <h2>What our customers say</h2>
+      <div class="testimonial">
+        <img src="undraw_profile_2.svg" alt="Customer 1 image">
+        <p>"I love this restaurant. The food is amazing and the staff is very helpful. I recommend the pizza and the salad."</p>
+        <span>- John Smith</span>
+      </div>
+      <div class="testimonial">
+        <img src="undraw_profile_1.svg" alt="Customer 2 image">
+        <p>"This is my favorite place to eat. The burgers are juicy and the fries are crispy. The atmosphere is cozy and relaxing."</p>
+        <span>- Jane Doe</span>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <p>© 2023 My Restaurant. All rights reserved.</p>
+  </div>
+</body>
+</html>
+

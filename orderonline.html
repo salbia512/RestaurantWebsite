@@ -1,0 +1,260 @@
+<html>
+<head>
+  <title>My Restaurant</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    /* Add your css styles here */
+    /* Add your css styles here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #f9eccc;
+  cursor:url('taxi-cursor.png'),auto;
+}
+#header {
+  /*background:linear-gradient(black,#f6c207);*/
+  background-color: #c79006;
+   
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+#header h1 {
+  font-family:'Times New Roman', Times, serif;
+  font-style: italic;
+  text-shadow: 2px 2px 4px red;
+ /* font-size: 36px;*/
+}
+
+#header p {
+  padding-top: 3%;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+.brown{
+background-color: #fac533;
+color: rgb(126, 45, 4);
+font-weight: bold;
+}
+.yellow{
+background-color: rgb(178, 156, 82);
+color: white;
+font-weight: bold;
+}
+#header nav {
+  display: flex;
+}
+
+#header nav ul {
+  list-style: none;
+}
+
+#header nav ul li {
+  padding-top: 5%;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#header nav ul li a {
+  
+  color: white;
+  text-decoration: none;
+ 
+}
+#header nav ul li a:hover {
+  color: yellow;
+}
+
+#footer {
+   background-color :#c79006; 
+   color :white; 
+   padding :20px; 
+   text-align :center; 
+   }
+
+#footer p {
+   font-family :Arial, sans-serif; 
+   font-size :16px; 
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div id="header"> 
+          <div class="row">
+            <div class="col-lg-3 col-md-3">
+              <h1>My Restaurant</h1>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <p>Welcome to the best place to enjoy delicious food and drinks.
+                  
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-3">
+              <nav>
+                <ul>
+                  <li><a href="restaurantproject.html">Home</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a onclick="about()" >About</a></li>
+                  <li><a onclick="contact()">Contact</a></li>
+               </ul>
+              </nav>
+            </div>
+          </div>
+  </div>
+  </div>
+  <div class="container">
+    <div class="row">
+<div class="col-lg-4 col-md-12"  style="color: brown;">
+  <br>
+ <img src="pic2.JPG"class="img-responsive" id="picture" style="display: block;">
+  <div style="display:none;" id="deliveryfood">
+    Please Enter Your Name:<input class="form-control" type="text" id="name">
+    <br>
+    Please Enter Your Address:<input class="form-control" type="text" name="ad" id="add"><br>
+    Please Enter Your Phone Number:<input class="form-control" type="text" name="ph" id="pho"><br>
+    <button onclick="delivery2()" class="btn btn-danger">ORDER NOW!</button><br>
+    <div style="background-color: rgb(255, 255, 255);border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;">
+      <h2>Bill</h2>
+    <h3>
+      Items
+    </h3>
+    <p id="items">    </p>
+    <h3>
+      Total
+    </h3>
+    <p id="bill">    </p>
+  </div>
+    </div>
+</div>
+<div class="col-lg-8 col-md-12" style=" color: rgb(132, 12, 14);">
+  <br>
+<table class="table table-responsive table-bordered table-hover" style=" background-color: cornsilk; color: #630404; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+<tr><td>Zinger Burger<br>Price Rs 440<br>Select:<input type="checkbox" name="selectdeal" id="s01"><br>Quantity:<input type="number"  id="q1" value="1"></td>
+  <td>Zinger Cheese Burger<br>Price Rs 460<br>Select:<input type="checkbox" name="selectdeal" id="s02"><br>Quantity:<input type="number" id="q2" value="1"></td></tr>
+  <tr><td>Chicken Burger<br>Price Rs 360<br>Select:<input type="checkbox" name="selectdeal" id="s03"><br>Quantity:<input type="number" id="q3" value="1"></td>
+  <td>Chicken Shawarma<br>Price Rs 300<br>Select:<input type="checkbox" name="selectdeal" id="s04"><br>Quantity:<input type="number" id="q4" value="1"></td></tr>
+  <tr><td>Hot and spicy Shawarma<br>Price Rs 320<br>Select:<input type="checkbox" name="selectdeal" id="s05"><br>Quantity:<input type="number" id="q5" value="1"></td>
+  <td>Full fried Chicken<br>Price Rs 980<br>Select:<input type="checkbox" name="selectdeal" id="s06"><br>Quantity:<input type="number" id="q6" value="1"></td></tr>
+  <tr><td>Chicken Corn Soup<br>Price Rs 400<br>Select:<input type="checkbox" name="selectdeal" id="s07"><br>Quantity:<input type="number" id="q7" value="1"></td>
+  <td>Vegetable Soup<br>Price Rs 400<br>Select:<input type="checkbox" name="selectdeal" id="s08"><br>Quantity:<input type="number" id="q8" value="1"></td></tr>
+ <tr><td>Large Fries<br>Price Rs 220<br>Select:<input type="checkbox" name="selectdeal" id="s09"><br>Quantity:<input type="number" id="q9" value="1"></td>
+  <td>Russian Salad<br>Price Rs 320<br>Select:<input type="checkbox" name="selectdeal" id="s010"><br>Quantity:<input type="number" id="q10" value="1"></td></tr>
+</table>
+</div>
+
+    </div>
+    <button class="btn btn-danger" style="font-family: 'sofia', sans-serif; border-style: groove; border-color: yellow; color: white; display: block; margin: 0 auto;" onclick="selectfood()">
+      Order Selected Food
+    </button>
+
+
+  </div>
+
+
+
+
+
+  <div id="order1">
+    <div class="container">
+      <h1 style="text-align:center; color:rgb(156, 116, 6);">Deals</h1>
+  <h3 style="text-align:center; color:rgb(255, 200, 47);">Buy 1 Get 1 Free</h3>
+  <div class="row">
+  <div class="col-lg-4 brown"  >
+  <h3>Deal 1</h3>
+  <p>1 chicken burger</p>
+  <p>1 pack fries</p>
+  <p>1 drink</p>
+  <h4>Price:Rs 350</h4>
+  Select Deal:<input type="checkbox" name="selectdeal" id="s1">
+  </div>
+  <div class="col-lg-4 yellow"  >
+  <h3>Deal 2</h3>
+  <p>1 Zinger burger</p>
+  <p>1 pack fries</p>
+  <p>1 drink</p>
+  <h4>Price:Rs 450</h4>
+  Select Deal:<input type="checkbox" name="selectdeal" id="s2">
+  </div>
+  <div class="col-lg-4 brown" >
+  <h3>Deal 3</h3>
+  <p>1 Turkish shawarma</p>
+  <p>1 pack fries</p>
+  <p>1 drink, 5 wings</p>
+  
+  <h4>Price:Rs 600</h4>
+  Select Deal:<input type="checkbox" name="selectdeal" id="s3">
+  </div>
+  </div>
+  <br>
+  <div class="row">
+  <div class="col-lg-4 yellow" >
+  <h3>Deal 4</h3>
+  <p>1 Zinger burger</p>
+  <p>1 Chicken piece</p>
+  <p>1 drink</p>
+  <p>1 Fries</p>
+  <h4>Price:Rs 750</h4>
+  Select Deal:<input type="checkbox" name="selectdeal" id="s4">
+  </div>
+  <div class="col-lg-4 brown" >
+  <h3>Deal 5</h3>
+  <p>1 Zinger burger</p>
+  <p>1 Chicken piece</p>
+  <p>1 chicken paratha</p>
+  <p>1 Fries</p>
+  <h4>Price:Rs 900</h4>
+  Select Deal:<input type="checkbox" name="selectdeal" id="s5">
+  </div>
+  <div class="col-lg-4 yellow" >
+  <h3>Deal 6</h3>
+  <p>1 Zinger burger</p>
+  <p>1 Chicken burger</p>
+  <p>1 pizza</p>
+  <p>1 Fries</p>
+  <h4>Price:Rs 1050</h4>
+  Select Deal:<input type="checkbox" name="selectdeal" id="s6">
+  
+  </div>
+  
+  <div>
+  
+  <button class="btn btn-danger" style="font-family: 'sofia', sans-serif; border-style: groove; border-color: yellow; color: white; display: block; margin: 0 auto;" onclick="selecteddeals()">
+    Order Selected Deals
+  </button>
+  
+  <br>
+  <div style="display:none;" id="delivery">
+  Please Enter Your Name:<input class="form-control" type="text" id="name">
+  <br>
+  Please Enter Your Address:<input class="form-control" type="text" name="ad" id="add"><br>
+  Please Enter Your Phone Number:<input class="form-control" type="text" name="ph" id="pho"><br>
+  <button onclick="delivery2()" class="btn btn-danger">ORDER NOW!</button><br>
+  </div>
+  <br>
+  </div>
+  </div>
+  </div>
+  </div>
+      
+  <div id="footer">
+    <p>© 2023 My Restaurant. All rights reserved.</p>
+  </div>
+
+
+
+</body>
+</html>
+<script src="jsfile.js"></script>

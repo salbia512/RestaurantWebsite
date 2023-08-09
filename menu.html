@@ -1,0 +1,349 @@
+<html>
+<head>
+  <title>My Restaurant - Menu</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="jsfile.js"></script>
+  <style>
+    /* Add your css styles here */
+    /* Add your css styles here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #f9eccc;
+  cursor:url('taxi-cursor.png'),auto;
+}
+#header {
+  /*background:linear-gradient(black,#f6c207);*/
+  background-color: #c79006;
+   
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+#header h1 {
+  font-family:'Times New Roman', Times, serif;
+  font-style: italic;
+  text-shadow: 2px 2px 4px red;
+
+ /* font-size: 36px;*/
+}
+
+#header p {
+  padding-top: 3%;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+#header nav {
+  display: flex;
+}
+
+#header nav ul {
+  list-style: none;
+}
+
+#header nav ul li {
+  padding-top: 5%;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#header nav ul li a {
+  
+  color: white;
+  text-decoration: none;
+ 
+}
+#header nav ul li a:hover {
+  color: yellow;
+}
+
+.brown{
+background-color: #fac533;
+color: rgb(126, 45, 4);
+font-weight: bold;
+}
+.yellow{
+background-color: rgb(178, 156, 82);
+color: white;
+font-weight: bold;
+}
+
+#menu {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap:20px; 
+   }
+
+.menu-item {
+   display :flex; 
+   flex-direction :column; 
+   align-items :center; 
+   }
+
+.menu-item img {
+   width :300px; 
+   height :200px; 
+   object-fit :cover; 
+   }
+
+.menu-item h3 {
+   font-family :Arial, sans-serif; 
+   font-size :20px; 
+   margin-top :10px; 
+   }
+
+.menu-item p {
+   font-family :Arial, sans-serif; 
+   font-size :16px; 
+   margin-top :10px; 
+   }
+
+.menu-item span {
+   font-family :Arial, sans-serif; 
+   font-size :18px; 
+   font-weight :bold; 
+   color :green; 
+   margin-top :10px; 
+   }
+
+.aa {
+   display :block; 
+   color :white; 
+   background-color :rgb(173, 80, 235); 
+   text-decoration :none; 
+   padding :10px; 
+   width :200px; 
+   margin :20px auto; 
+   text-align :center; 
+   }
+
+.aa:hover {
+   background-color :lightblue; 
+   }
+
+#footer {
+   background-color :#c79006; 
+   color :white; 
+   padding :20px; 
+   text-align :center; 
+   }
+
+#footer p {
+   font-family :Arial, sans-serif; 
+   font-size :16px; 
+}
+.aboutt {
+ 
+  position: absolute;
+  z-index: 1;
+  background-color: #f9f9f9;
+}
+/*
+.aboutt:hover{
+  display: block;
+}*/
+  </style>
+</head>
+<body> 
+     <div class="container">
+      <div id="header"> 
+        <div class="row">
+          <div class="col-lg-3 col-md-3">
+            <h1>My Restaurant</h1>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <p>Welcome to the best place to enjoy delicious food and drinks.
+                
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <nav>
+              <ul>
+                <li><a href="restaurantproject.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a onclick="about()" >About</a></li>
+                <li><a onclick="about()">Contact</a></li>
+                <li><a href="orderonline.html" class="btn btn-danger">Online Order</a></li>
+              </ul>
+            </nav>
+            <div class="aboutt" style="display: none;">
+              <h1>jdjfjd</h1>
+
+            </div>
+          </div>
+        </div>
+</div>
+</div>
+<div class="container">
+  
+  <div class="row">
+    <div class="col-lg-12 col-md-12" style="text-align: center;">
+      
+      <h2>Our Menu</h2>
+      <p>Here are some of our most popular dishes. You can also download our full menu as a PDF file.</p>
+      <br>
+    </div>
+  </div>
+  <div id="content">
+    <div class="row">
+      <div class="col-lg-6 col-md-12" style="display: flex; justify-content: center; align-items: center;">
+        <div id="menu" style="align-items: center;">
+          <div class="menu-item" style="align-items: center;">
+            <img src="pizza.jpg" alt="Pizza image">
+            <h3>Pizza</h3>
+            <p>A classic Italian dish with cheese, tomato sauce and various toppings.</p>
+            <span>Rs 1300</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="menu-item">
+          <img src="burger.jpg" alt="Burger image">
+          <h3>Burger</h3>
+          <p>A juicy beef patty with lettuce, tomato, onion and cheese in a sesame bun.</p>
+          <span>Rs 300</span>
+        </div>
+      </div>
+      <br>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 col-md-12" style="display: flex; justify-content: left; align-items: left;">
+        <div style="display: flex; justify-content: left; align-items: left;"  class="menu-item">
+          <img src="salad.jpg" alt="Salad image" style="display: flex; justify-content: left; align-items: left;">
+          <h3>Salad</h3>
+          <p>A fresh and healthy mix of greens, vegetables, fruits and nuts.</p>
+          <span>Rs 150</span>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="menu-item">
+          <img src="cake.jpg" alt="Cake image">
+          <h3>Cake</h3>
+          <p>A sweet and moist dessert with chocolate, vanilla, cream and fruits.</p>
+          <span>Rs 2000</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-12" style="display: flex; justify-content: left; align-items: left;">
+        <div style="display: flex; justify-content: left; align-items: left;"  class="menu-item">
+          <img src="shawarma.png" alt="Salad image" style="display: flex; justify-content: left; align-items: left;">
+          <h3>shawarma</h3>
+          <p>A fresh and healthy Shawarma.</p>
+          <span>Rs 150</span>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="menu-item">
+          <img src="biriyani.png" alt="Cake image">
+          <h3>Biryani</h3>
+          <p>A fresh and healthy bariyani with fresh Chicken.</p>
+          <span>Rs 2000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<hr>
+<a class="aa" href="full-menu.docx" download>Download Full Menu</a>
+  
+<div id="order1">
+  <div class="container">
+    <h1 style="text-align:center; color:rgb(156, 116, 6);">Deals</h1>
+<h3 style="text-align:center; color:rgb(255, 200, 47);">Buy 1 Get 1 Free</h3>
+<div class="row">
+<div class="col-lg-4 brown"  >
+<h3>Deal 1</h3>
+<p>1 chicken burger</p>
+<p>1 pack fries</p>
+<p>1 drink</p>
+<h4>Price:Rs 350</h4>
+Select Deal:<input type="checkbox" name="selectdeal" id="s1">
+</div>
+<div class="col-lg-4 yellow"  >
+<h3>Deal 2</h3>
+<p>1 Zinger burger</p>
+<p>1 pack fries</p>
+<p>1 drink</p>
+<h4>Price:Rs 450</h4>
+Select Deal:<input type="checkbox" name="selectdeal" id="s2">
+</div>
+<div class="col-lg-4 brown" >
+<h3>Deal 3</h3>
+<p>1 Turkish shawarma</p>
+<p>1 pack fries</p>
+<p>1 drink, 5 wings</p>
+
+<h4>Price:Rs 600</h4>
+Select Deal:<input type="checkbox" name="selectdeal" id="s3">
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 yellow" >
+<h3>Deal 4</h3>
+<p>1 Zinger burger</p>
+<p>1 Chicken piece</p>
+<p>1 drink</p>
+<p>1 Fries</p>
+<h4>Price:Rs 750</h4>
+Select Deal:<input type="checkbox" name="selectdeal" id="s4">
+</div>
+<div class="col-lg-4 brown" >
+<h3>Deal 5</h3>
+<p>1 Zinger burger</p>
+<p>1 Chicken piece</p>
+<p>1 chicken paratha</p>
+<p>1 Fries</p>
+<h4>Price:Rs 900</h4>
+Select Deal:<input type="checkbox" name="selectdeal" id="s5">
+</div>
+<div class="col-lg-4 yellow" >
+<h3>Deal 6</h3>
+<p>1 Zinger burger</p>
+<p>1 Chicken burger</p>
+<p>1 pizza</p>
+<p>1 Fries</p>
+<h4>Price:Rs 1050</h4>
+Select Deal:<input type="checkbox" name="selectdeal" id="s6">
+
+</div>
+
+<div>
+
+<button class="btn btn-danger" style="font-family: 'sofia', sans-serif; border-style: groove; border-color: yellow; color: white; display: block; margin: 0 auto;" onclick="selecteddeals()">
+  Order Selected Deals
+</button>
+
+<br>
+<div style="display:none;" id="delivery">
+Please Enter Your Name:<input class="form-control" type="text" id="name">
+<br>
+Please Enter Your Address:<input class="form-control" type="text" name="ad" id="add"><br>
+Please Enter Your Phone Number:<input class="form-control" type="text" name="ph" id="pho"><br>
+<button onclick="delivery2()" class="btn btn-danger">ORDER NOW!</button><br>
+</div>
+<br>
+</div>
+</div>
+</div>
+</div>
+    
+  <div id="footer">
+    <p>© 2023 My Restaurant. All rights reserved.</p>
+  </div>
+</body>
+</html>
+
